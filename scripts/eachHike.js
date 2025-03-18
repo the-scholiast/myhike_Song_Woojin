@@ -14,9 +14,10 @@ function displayHikeInfo() {
             hikeName = doc.data().name;
 
             // only populate title, and image
-            document.getElementById("hikeName").innerHTML = hikeName;
+            document.getElementById("hikeName").innerHTML = `<div class="d-flex justify-content-center text-success-emphasis fw-bold">${hikeName}</div>`;
             let imgEvent = document.querySelector(".hike-img");
             imgEvent.src = "../images/" + hikeCode + ".jpg";
+            imgEvent.classList.add("rounded-3", "w-100")
         });
 }
 
